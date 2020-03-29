@@ -3,6 +3,7 @@ package com.suneee.mapper;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.suneee.model.Item;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 

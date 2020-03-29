@@ -1,6 +1,7 @@
 package com.suneee.dynamicDataSource;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 import java.lang.reflect.Field;
@@ -18,7 +19,7 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
 
             if (ds != null)
                 System.out.println("操作的数据源是： "
-                        + ds + "->url:" + ((DruidDataSource) targetV.get(ds)).getUrl());
+                        + ds + "->url:" + ((ComboPooledDataSource) targetV.get(ds)).getJdbcUrl());
             return DynamicDataSourceContextHolder.getDataSourceType();
 
         } catch (NoSuchFieldException e) {
