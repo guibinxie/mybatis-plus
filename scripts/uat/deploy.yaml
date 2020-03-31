@@ -1,4 +1,4 @@
-- hosts: ep1_uat
+- hosts: test_server
   tasks:
       copy:
         src=/root/.jenkins/workspace/springboot/target/mybatis-plus.jar
