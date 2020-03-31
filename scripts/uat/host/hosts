@@ -1,5 +1,5 @@
-10.82.18.44 ansible_ssh_user=omsapp ansible_ssh_port=22 ansible_ssh_pass=xaQ2xxzu
+39.100.18.213 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass=Root123456
 
 
 [ep1_uat]
-10.82.18.44
+39.100.18.213
