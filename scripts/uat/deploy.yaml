@@ -1,4 +1,5 @@
-- hosts: test_server
+- hosts: 39.100.18.213
+  remote_user: root
   tasks:
       copy:
         src=/root/.jenkins/workspace/springboot/target/mybatis-plus.jar
