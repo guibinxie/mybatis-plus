@@ -1,0 +1,6 @@
+- hosts: ep1_uat
+  tasks:
+    - name: "delivery the war to the remote_host!"
+      copy:
+        src=cp /root/.jenkins/workspace/springboot/target/mybatis-plus.jar
+        dest=/app/test/mybatis-plus.jar
