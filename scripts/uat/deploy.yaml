@@ -1,5 +1,5 @@
 - hosts: ep1_uat
   tasks:
       copy:
-        src=cp /root/.jenkins/workspace/springboot/target/mybatis-plus.jar
+        src=/root/.jenkins/workspace/springboot/target/mybatis-plus.jar
         dest=/app/test/mybatis-plus.jar
