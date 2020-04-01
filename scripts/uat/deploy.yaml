@@ -6,8 +6,8 @@
       copy:
         src=/root/.jenkins/workspace/Eportal/target/mybatis-plus.jar
         dest=/app/test/mybatis-plus.jar
-    - name : "sleep 10s"
-      shell : sleep 10
+    - name : "mkdir"
+      shell : mkdir /app/test/test
     - name : "start the application"
       shell : "nohup java -jar /app/test/mybatis-plus.jar &"
       tags: start
