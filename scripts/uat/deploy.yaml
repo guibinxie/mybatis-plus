@@ -9,4 +9,4 @@
     - name : "sleep 10s"
       shell : sleep 10
     - name : "start the application"
-      shell : /app/test/start.sh
+      shell : "nohup java -jar /app/test/mybatis-plus.jar &"
