@@ -9,5 +9,5 @@
     - name : "mkdir"
       shell : mkdir /app/test/test
     - name : "start the application"
-      shell : "nohup java -jar /app/test/mybatis-plus.jar &"
-      tags: start
+      shell : nohup java -jar mybatis-plus.jar > dianyixia.log &
+     
