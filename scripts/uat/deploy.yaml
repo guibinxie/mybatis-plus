@@ -9,4 +9,4 @@
     - name : "sleep 10s"
       shell : sleep 10
     - name : "start the application"
-      shell : nohup /app/test/start.sh &
+      shell : /app/test/start.sh
