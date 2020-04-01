@@ -1,6 +1,6 @@
-- hosts: 39.100.18.213
-  remote_user: root
+- hosts: ep1_uat
   tasks:
+    - name: "delivery the jar to the remote_host!"
       copy:
-        src=/root/.jenkins/workspace/springboot/target/mybatis-plus.jar
+        src=/root/.jenkins/workspace/Eportal/target/mybatis-plus.jar
         dest=/app/test/mybatis-plus.jar

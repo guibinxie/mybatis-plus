@@ -1,5 +1,5 @@
-39.100.18.213 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass=Root123456
+192.168.67.129 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass=123456
 
 
 [ep1_uat]
-39.100.18.213
+192.168.67.129
