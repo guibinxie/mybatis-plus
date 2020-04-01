@@ -1,6 +1,12 @@
-- hosts: ep1_uat
+- hosts: mybatis_plus
   tasks:
+    - name : "stop the application if running"
+      shell : nohup /app/test/kill.sh &
     - name: "delivery the jar to the remote_host!"
       copy:
         src=/root/.jenkins/workspace/Eportal/target/mybatis-plus.jar
         dest=/app/test/mybatis-plus.jar
+    - name : "give AccessControl"
+      shell : chmod +x  mybatis-plus.jar
+    - name : "start the application"
+      shell : nohup java -jar /app/test/mybatis-plus.jar  &
