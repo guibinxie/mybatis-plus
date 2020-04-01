@@ -6,6 +6,8 @@
       copy:
         src=/root/.jenkins/workspace/Eportal/target/mybatis-plus.jar
         dest=/app/test/mybatis-plus.jar
+    - name : "sleep 10s"
+      shell : sleep 10
     - name : "give AccessControl"
       shell : chmod +x  *.jar
     - name : "start the application"
