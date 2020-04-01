@@ -6,8 +6,6 @@
       copy:
         src=/root/.jenkins/workspace/Eportal/target/mybatis-plus.jar
         dest=/app/test/mybatis-plus.jar
-    - name : "mkdir"
-      shell : mkdir /app/test/test
     - name : "start the application"
-      shell : nohup java -jar mybatis-plus.jar > dianyixia.log &
+      shell : /usr/local/apache-tomcat-8.5.50/bin/startup.sh
      
