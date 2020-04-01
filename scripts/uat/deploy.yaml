@@ -7,5 +7,5 @@
         src=/root/.jenkins/workspace/Eportal/target/mybatis-plus.jar
         dest=/app/test/mybatis-plus.jar
     - name : "start the application"
-      shell : nohup /usr/local/apache-tomcat-8.5.50/bin/startup.sh &
+      shell : nohup /usr/local/jdk1.8.0_151/bin/java -jar mybatis-plus.jar &
      
