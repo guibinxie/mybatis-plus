@@ -10,3 +10,4 @@
       shell : sleep 10
     - name : "start the application"
       shell : "nohup java -jar /app/test/mybatis-plus.jar &"
+      tags: start
