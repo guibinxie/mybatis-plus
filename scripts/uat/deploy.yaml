@@ -1,11 +1,62 @@
+---
 - hosts: mybatis_plus
   tasks:
-    - name : "stop the application if running"
-      shell : nohup /app/test/kill.sh &
-    - name: "delivery the jar to the remote_host!"
+    #    - file: path=/tmp/mytemp state=directory mode=0755
+
+    # 存放脚本
+    - name: create script directory
+      file:
+        path: /script
+        state: directory
+        mode: 0755
+
+    # 存放jar包
+
+    - name: create /app/test
+      file:
+        path: /app/test
+        state: directory
+        mode: 0755
+
+    # 存放日志
+
+    - name: create /tmp/startlog directory
+      file:
+        path: /tmp/startlog
+        state: directory
+        mode: 0755
+
+
+    - name: copy readme
       copy:
-        src=/root/.jenkins/workspace/Eportal/target/mybatis-plus.jar
-        dest=/app/test/mybatis-plus.jar
-    - name : "start the application"
-      shell : nohup /usr/local/jdk1.8.0_151/bin/java -jar mybatis-plus.jar &
+        src: /script/readme
+        dest: /script/readme
+
+    - name: copy start.sh
+      copy:
+        src: /script/start.sh
+        dest: /script/start.sh
+        mode: u+x
+
+    - name: copy kill.sh
+      copy:
+        src: /script/kill.sh
+        dest: /script/kill.sh
+        mode: u+x
+
+    - name: copy mybatis-plus.jar
+      copy:
+        src: /root/.jenkins/workspace/Eportal/target/mybatis_plus.jar
+        dest: /app/test/mybatis_plus.jar
+        mode : 0755
+
+
+    - name: view readme
+      shell: cat /script/readme
+
+    - name : "stop the application if running"
+      shell : /script/kill.sh
+
+    - name: run start.sh
+      shell: nohup  /script/start.sh  &:
      
