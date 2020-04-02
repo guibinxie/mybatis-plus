@@ -58,5 +58,5 @@
       shell : /script/kill.sh
 
     - name: run start.sh
-      shell: nohup  /script/start.sh  &:
+      shell: nohup  /script/start.sh  &
      
