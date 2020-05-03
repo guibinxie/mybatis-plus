@@ -31,7 +31,7 @@ public class ItemController {
     @RequestMapping("/findall")
     @ResponseBody
     public List<Item> findAll(){
-        List<Item> itemList = itemService.findAll("haowuliao");
+        List<Item> itemList = itemService.findAll("xiuwen");
        /* Workbook workbook = new HSSFWorkbook();
         Sheet sheet = workbook.createSheet("User");
         final Row row = sheet.createRow(0);
