@@ -20,6 +20,9 @@ public class Task  {
         Config config = ConfigService.getConfig("eportal");
         String s1 = config.getProperty("xiuwen", "haowuliao");
         log.info("s1:"+s1);
+
+
+        System.out.printf("");
         return ReturnT.SUCCESS;
     }
 }
